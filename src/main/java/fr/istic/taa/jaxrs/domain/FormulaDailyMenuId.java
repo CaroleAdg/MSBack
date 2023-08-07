@@ -14,6 +14,7 @@ public class FormulaDailyMenuId implements Serializable {
 	public DailyMenu getDailyMenu() {
 		return dailyMenu;
 	}
+	
 	public void setDailyMenu(DailyMenu dailyMenu) {
 		this.dailyMenu = dailyMenu;
 	}

@@ -9,7 +9,16 @@ import javax.persistence.ManyToOne;
 public class OrdersProductId implements Serializable{
 	private Orders order;
 	private Product product;
+
 	
+	
+	public OrdersProductId() {
+		
+	}
+	public OrdersProductId(Orders order, Product product) {
+		this.order = order;
+		this.product = product;
+	}
 	@ManyToOne
 	public Orders getOrder() {
 		return order;

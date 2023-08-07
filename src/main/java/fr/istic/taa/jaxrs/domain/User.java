@@ -25,9 +25,9 @@ public class User implements Serializable {
 	protected String firstName;
 	protected String lastName;
 	protected int number;
-
+	protected String password;
 	protected String role;
-	protected LocalDateTime createdDate;
+	protected LocalDateTime createdDate=LocalDateTime.now();
 	protected LocalDateTime updatedDate;
 	protected List<Orders> orders = new ArrayList<Orders>();
 	
@@ -94,6 +94,14 @@ public class User implements Serializable {
 	}
 	public void setUpdatedDate(LocalDateTime updatedDate) {
 		this.updatedDate = updatedDate;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
 	}
 	
 	

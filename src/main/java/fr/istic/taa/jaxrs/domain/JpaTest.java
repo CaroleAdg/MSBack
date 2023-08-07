@@ -4,6 +4,8 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 import javax.persistence.PersistenceContext;
 
+import fr.istic.taa.jaxrs.dao.generic.EntityManagerHelper;
+
 public class JpaTest {
 
 	/**

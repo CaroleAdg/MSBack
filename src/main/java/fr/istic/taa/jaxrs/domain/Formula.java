@@ -18,7 +18,7 @@ public class Formula implements Serializable{
 	private Long formulaId;
 	private String formulaName;
 	private int formulaPrice;
-	private LocalDateTime createdDate;
+	private LocalDateTime createdDate=LocalDateTime.now();
 	private LocalDateTime updatedDate;
 	private List<Product> p = new ArrayList<Product>();
 	private List<Orders_Formula> of = new ArrayList<Orders_Formula>();

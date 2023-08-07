@@ -5,6 +5,7 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -17,14 +18,11 @@ import javax.persistence.OneToMany;
 
 @Entity
 public class Orders implements Serializable {
-	public void setOp(List<Orders_Product> op) {
-		this.op = op;
-	}
-
+	
 	private Long orderId;
 	private int orderStatus;
 	private int orderPrice;
-	private LocalDateTime createdDate;
+	private LocalDateTime createdDate=LocalDateTime.now();
 	private LocalDateTime updatedDate;
 	private User u;
 	private List<Orders_Product> op = new ArrayList<Orders_Product>();
@@ -42,21 +40,21 @@ public class Orders implements Serializable {
 		this.u = u;
 	}
 	
-	@OneToMany(mappedBy="ordersProductId.order")
+	@OneToMany(mappedBy="ordersProductId.order", cascade = CascadeType.ALL)
 	public List<Orders_Product> getOp() {
 		return op;
 	}
-	
-	public void setP(List<Orders_Product> op) {
+
+	public void setOp(List<Orders_Product> op) {
 		this.op = op;
 	}
 	
-	@OneToMany(mappedBy="ordersFormulaId.order")
-	public List<Orders_Formula> getF() {
+	@OneToMany(mappedBy="ordersFormulaId.order",cascade = CascadeType.ALL)
+	public List<Orders_Formula> getOf() {
 		return of;
 	}
 
-	public void setF(List<Orders_Formula> of) {
+	public void setOf(List<Orders_Formula> of) {
 		this.of = of;
 	}
 

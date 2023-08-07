@@ -8,7 +8,7 @@ import javax.persistence.Entity;
 @Entity
 public class Formula_DailyMenu implements Serializable {
 	private FormulaDailyMenuId formulaDailyMenuId;
-	private String status;
+	private int status;
 	
 	@EmbeddedId
 	public FormulaDailyMenuId getFormulaDailyMenuId() {
@@ -17,12 +17,13 @@ public class Formula_DailyMenu implements Serializable {
 	public void setFormulaDailyMenuId(FormulaDailyMenuId formulaDailyMenuId) {
 		this.formulaDailyMenuId = formulaDailyMenuId;
 	}
-	public String getStatus() {
+	public int getStatus() {
 		return status;
 	}
-	public void setStatus(String status) {
+	public void setStatus(int status) {
 		this.status = status;
 	}
+	
 	
 	
 }

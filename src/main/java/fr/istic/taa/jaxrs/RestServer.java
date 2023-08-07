@@ -24,7 +24,6 @@ public class RestServer {
         ut.start(
                 Undertow.builder()
                         .addHttpListener(8080, "localhost")
-
         );
 
         logger.info("JAX-RS based micro-service running!");

@@ -20,7 +20,7 @@ public class Product implements Serializable{
 	private int productPrice;
 	private String description;
 	private String type;
-	private LocalDateTime createdDate;
+	private LocalDateTime createdDate=LocalDateTime.now();
 	private LocalDateTime updatedDate;
 	private List<Orders_Product> op =new ArrayList<Orders_Product>();
 	

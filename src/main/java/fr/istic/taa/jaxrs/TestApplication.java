@@ -18,10 +18,14 @@ package fr.istic.taa.jaxrs;
 
 import java.util.HashSet;
 import java.util.Set;
-
 import javax.ws.rs.core.Application;
 
-import fr.istic.taa.jaxrs.rest.PetResource;
+import fr.istic.taa.jaxrs.rest.DailymenuRessource;
+import fr.istic.taa.jaxrs.rest.FormulaRessource;
+import fr.istic.taa.jaxrs.rest.OrdersRessource;
+import fr.istic.taa.jaxrs.rest.ProductRessource;
+import fr.istic.taa.jaxrs.rest.SwaggerResource;
+import fr.istic.taa.jaxrs.rest.UserRessource;
 import io.swagger.v3.jaxrs2.integration.resources.OpenApiResource;
 
 public class TestApplication extends Application {
@@ -32,9 +36,15 @@ public class TestApplication extends Application {
 
         final Set<Class<?>> clazzes = new HashSet<Class<?>>();
 
-        clazzes.add(PetResource.class);
+        clazzes.add(UserRessource.class);
+        clazzes.add(OrdersRessource.class);
+        clazzes.add(ProductRessource.class);
+        clazzes.add(FormulaRessource.class);
+        clazzes.add(DailymenuRessource.class);
+
+
         clazzes.add(OpenApiResource.class);
-        
+        clazzes.add(SwaggerResource.class);
 
         return clazzes;
     }

@@ -10,6 +10,10 @@ public class OrdersFormulaId implements Serializable{
 	private Orders order;
 	private Formula formula;
 	
+	
+	public OrdersFormulaId() {
+		
+	}
 	@ManyToOne
 	public Orders getOrder() {
 		return order;

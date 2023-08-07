@@ -10,6 +10,9 @@ public class Orders_Product implements Serializable {
 	private OrdersProductId ordersProductId;
 	private int quantityOfProduct;
 	
+	
+	
+	
 	@EmbeddedId
 	public OrdersProductId getOrdersProductId() {
 		return ordersProductId;
